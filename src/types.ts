@@ -18,7 +18,7 @@ export type Event = {
   event_duration:string;
   service_type:string;
   service_revenue:string;
-  service_name:string;
+  service:string;
   car_type:string;
   car_brand:string;
   car_model:string;
