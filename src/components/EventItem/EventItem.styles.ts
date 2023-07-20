@@ -17,4 +17,5 @@ export const viewStyles = StyleSheet.create({
 export const textStyles = StyleSheet.create({
   title: { fontSize: fontSize.body, marginBottom: spacing.small / 2 },
   subtitle: { fontSize: fontSize.caption1, color: 'gray' },
+  buble: { fontSize: fontSize.body, color: 'gray' },
 });
