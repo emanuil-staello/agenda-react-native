@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import React, { useCallback } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Event } from 'src/types';
-import { Circle } from '../Circle/Circle';
+// import { Circle } from '../Circle/Circle';
 
 import { viewStyles, textStyles } from './EventItem.styles';
 
