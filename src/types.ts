@@ -75,4 +75,5 @@ export interface AgendaProps extends AgendaMonthProps {
   locale?: LocaleType;
   firstDayMonday?: boolean;
   viewType?: AgendaViewType;
+  renderEvent?:()=>void;
 }
