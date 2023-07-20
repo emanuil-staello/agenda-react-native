@@ -17,7 +17,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   const date = `${dayjs(startDate).format('HH:mm')} to ${dayjs(endDate).format(
     'HH:mm'
   )}`;
-  console.log(service_name)
+  console.log(service)
   console.log('banica')
   return (
     <TouchableOpacity style={viewStyles.container} onPress={onEventPress}>
