@@ -16,7 +16,7 @@ export type Event = {
   serviceType:string;
   value:string;
   service:string;
-  car:string;
+  vechile_info:string;
  
 
   
