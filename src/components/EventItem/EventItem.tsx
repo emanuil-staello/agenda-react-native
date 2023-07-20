@@ -26,7 +26,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
       </View>
       <View>
         <Text style={textStyles.title}>{name}</Text>
-        <Text style={{fontWeight:'bold',fontSize:17,backgroundColor:rest.color,color:'#fff'}>{status}</Text>
+        <Text style={textStyles.buble}>{status}</Text>
         <Text style={textStyles.subtitle}>{date}</Text>
         <Text style={textStyles.subtitle}>Service:{service}</Text>
       </View>
