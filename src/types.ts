@@ -11,6 +11,32 @@ export type Event = {
   startDate: Date;
   endDate: Date;
   color: string;
+  customer_id:string;
+  customer_status:string;
+  event_start_date:string;
+  event_end_date:string;
+  event_duration:string;
+  service_type:string;
+  service_revenue:string;
+  service_name:string;
+  car_type:string;
+  car_brand:string;
+  car_model:string;
+  car_color:string;
+  car_year:string;
+  changeEventStatus: (
+    id: string,
+    businessId: string,
+    locationId: string,
+    ownerId: string,
+    start: Date
+  ) => void;
+  handle_date_modal:(
+    startDate: string,
+    id:string,
+  );
+ updateState: Dispatch<SetStateAction<any>>;
+  
 };
 
 type ValueOf<T> = T[keyof T];
