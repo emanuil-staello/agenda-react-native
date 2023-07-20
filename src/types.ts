@@ -24,18 +24,7 @@ export type Event = {
   car_model:string;
   car_color:string;
   car_year:string;
-  changeEventStatus: (
-    id: string,
-    businessId: string,
-    locationId: string,
-    ownerId: string,
-    start: Date
-  ) => void;
-  handle_date_modal:(
-    startDate: string,
-    id:string,
-  );
- updateState: Dispatch<SetStateAction<any>>;
+
   
 };
 
