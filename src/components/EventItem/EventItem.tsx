@@ -12,7 +12,7 @@ type EventItemProps = {
 
 export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   const onEventPress = useCallback(() => onPress?.(rest), [onPress, rest]);
-  const { name, startDate, endDate,service } = rest;
+  const { name, startDate, endDate,service,serviceType,status,value,vechile_info } = rest;
 
   const date = `${dayjs(startDate).format('HH:mm')} to ${dayjs(endDate).format(
     'HH:mm'
@@ -26,9 +26,9 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
       </View>
       <View>
         <Text style={textStyles.title}>{name}</Text>
+        <Text style={{fontWeight:'bold',fontSize:17,backgroundColor:rest.color,color:'#fff'}>{status}</Text>
         <Text style={textStyles.subtitle}>{date}</Text>
-        <Text style={textStyles.subtitle}>'Banica'</Text>
-        <Text style={textStyles.subtitle}>{service}</Text>
+        <Text style={textStyles.subtitle}>Service:{service}</Text>
       </View>
     </TouchableOpacity>
   );
