@@ -85,7 +85,7 @@ export const Agenda = ({
         renderSectionHeader={renderSectionHeader}
         viewType={viewType}
         firstDayMonday={firstDayMonday}
-        renderEvent={renderEvent}
+
       />
     </View>
   );
