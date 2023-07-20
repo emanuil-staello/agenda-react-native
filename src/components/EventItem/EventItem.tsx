@@ -21,14 +21,15 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   return (
     <TouchableOpacity style={viewStyles.container} onPress={onEventPress}>
       <View style={viewStyles.circleContainer}>
-        <Circle size={15} color={rest.color} />
+{/*         <Circle size={15} color={rest.color} /> */}
+       <Text style={textStyles.buble}>{status}</Text>
       </View>
       <View>
         <Text style={textStyles.title}>{name}</Text>
-        <Text style={textStyles.buble}>{status}</Text>
+       
         <Text style={textStyles.subtitle}>{date}</Text>
         <Text style={textStyles.subtitle}>Service:{service}</Text>
-        <Text style={textStyles.subtitle}>${value}</Text>
+        <Text style={textStyles.subtitle}>Revenue: ${value}</Text>
       </View>
     </TouchableOpacity>
   );
