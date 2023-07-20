@@ -18,6 +18,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
     'HH:mm'
   )}`;
   console.log(service_name)
+  console.log('banica')
   return (
     <TouchableOpacity style={viewStyles.container} onPress={onEventPress}>
       <View style={viewStyles.circleContainer}>
