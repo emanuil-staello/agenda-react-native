@@ -21,6 +21,7 @@ type EventsProps = {
   theme?: ThemeType;
   viewType: AgendaProps['viewType'];
   firstDayMonday: boolean;
+
 };
 
 const keyExtractor = (item: Event, index: number) => `${item.name}-${index}`;
@@ -35,6 +36,7 @@ export const Events = forwardRef(
       theme,
       viewType,
       firstDayMonday,
+      renderEvent,
     }: EventsProps,
     ref: Ref<SectionList>
   ) => {
