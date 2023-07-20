@@ -12,7 +12,7 @@ type EventItemProps = {
 
 export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   const onEventPress = useCallback(() => onPress?.(rest), [onPress, rest]);
-  const { name, startDate, endDate,service,serviceType,status,value,vechile_info } = rest;
+  const { name, startDate, endDate,service,status,value,vechile_info } = rest;
 
   const date = `${dayjs(startDate).format('HH:mm')} to ${dayjs(endDate).format(
     'HH:mm'
