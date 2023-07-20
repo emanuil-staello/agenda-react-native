@@ -36,7 +36,7 @@ export const Events = forwardRef(
       theme,
       viewType,
       firstDayMonday,
-      renderEvent,
+
     }: EventsProps,
     ref: Ref<SectionList>
   ) => {
