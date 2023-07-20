@@ -27,6 +27,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
       <View>
         <Text style={textStyles.title}>{name}</Text>
         <Text style={textStyles.subtitle}>{date}</Text>
+        <Text style={textStyles.subtitle}>'Banica'</Text>
         <Text style={textStyles.subtitle}>{service}</Text>
       </View>
     </TouchableOpacity>
