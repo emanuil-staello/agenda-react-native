@@ -12,13 +12,12 @@ type EventItemProps = {
 
 export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   const onEventPress = useCallback(() => onPress?.(rest), [onPress, rest]);
-  const { name, startDate, endDate,service,status,value,vechile_info } = rest;
+  const { name, startDate, endDate,service,status,value } = rest;
 
   const date = `${dayjs(startDate).format('HH:mm')} to ${dayjs(endDate).format(
     'HH:mm'
   )}`;
-  console.log(service)
-  console.log('banica')
+
   return (
     <TouchableOpacity style={viewStyles.container} onPress={onEventPress}>
       <View style={viewStyles.circleContainer}>
@@ -29,6 +28,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
         <Text style={textStyles.buble}>{status}</Text>
         <Text style={textStyles.subtitle}>{date}</Text>
         <Text style={textStyles.subtitle}>Service:{service}</Text>
+        <Text style={textStyles.subtitle}>${value}</Text>
       </View>
     </TouchableOpacity>
   );
