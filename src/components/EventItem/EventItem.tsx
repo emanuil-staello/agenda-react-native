@@ -22,7 +22,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
     <TouchableOpacity style={viewStyles.container} onPress={onEventPress}>
       <View style={viewStyles.circleContainer}>
 {/*         <Circle size={15} color={rest.color} /> */}
-       <Text style={{backgroundColor:rest.color,fontSize:16,fontWeight:'bold',color:'#fff',padding:5,borderRadius:5}}>{status}</Text>
+       <Text style={{backgroundColor:rest.color,fontSize:16,fontWeight:'bold',color:'#fff',padding:5,borderRadius:5,textTransform:'uppercase'}}>{status}</Text>
       </View>
       <View>
         <Text style={textStyles.title}>{name}</Text>
