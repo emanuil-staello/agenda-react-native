@@ -19,7 +19,6 @@ export const Agenda = ({
   locale = 'en',
   firstDayMonday = false,
   viewType = 'month',
-  headerElements,
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
   const currentDay = useMemo(() => selectedDay ?? new Date(), [selectedDay]);
@@ -55,7 +54,6 @@ export const Agenda = ({
     <View style={[viewStyles.container, theme?.container]}>
       {viewType === 'month' && (
         <View style={[viewStyles.monthContainer, theme?.monthContainer]}>
-          <headerElements/>
           <Month
             month={currentDay.getMonth()}
             year={currentDay.getFullYear()}
