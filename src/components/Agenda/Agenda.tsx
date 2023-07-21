@@ -51,9 +51,7 @@ export const Agenda = ({
     viewType,
     firstDayMonday
   );
-   function isEmpty(obj) {
-    return Object.keys(obj).length === 0;
-  }
+
   return (
     <View style={[viewStyles.container, theme?.container]}>
       {viewType === 'month' && (
