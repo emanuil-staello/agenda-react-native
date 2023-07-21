@@ -23,7 +23,7 @@ export const Agenda = ({
 
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
-  const [markedDays, setMarkedDays] = useState<ExtendedMarkedDays>({});
+
 
   const currentDay = useMemo(() => selectedDay ?? new Date(), [selectedDay]);
 
@@ -55,7 +55,6 @@ export const Agenda = ({
       viewType,
       firstDayMonday
     );
-    setMarkedDays(updatedMarkedDays);
   }, [currentDay, events, viewType, firstDayMonday]);
 
   return (
