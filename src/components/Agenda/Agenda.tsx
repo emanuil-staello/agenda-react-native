@@ -63,7 +63,7 @@ export const Agenda = ({
             year={currentDay.getFullYear()}
             startDate={currentDay}
             onPress={onDayPressCallback}
-            markedDays={Object.keys(markedDays).length>0</Month>&&markedDays}
+            markedDays={Object.keys(markedDays).length>0&&markedDays}
             showWeekdays
             locale={locale}
             firstDayMonday={firstDayMonday}
@@ -78,7 +78,7 @@ export const Agenda = ({
           monthTheme={monthTheme}
           firstDayMonday={firstDayMonday}
           locale={locale}
-          markedDays={Object.keys(markedDays).length>0</Month>&&markedDays}
+          markedDays={Object.keys(markedDays).length>0&&markedDays}
           onPress={onDayPressCallback}
 
         />
