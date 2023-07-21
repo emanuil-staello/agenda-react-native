@@ -20,11 +20,6 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
   )}`;
 
   return (
-    <TouchableOpacity style={{ flex: 1,
-      padding: 5,
-      flexDirection: 'row',
-                               }} 
-        onPress={onEventPress}>
     <LinearGradient
             colors={status === 'completed' ? ['#099773','#43b692'] : status === 'pending' ? ['#5ab2f7','#12cff3']:['#CB356B','#BD3F32']}
             // colors={['#5ab2f7','#12cff3']}
@@ -33,7 +28,11 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
             style={{flex: 1,padding:10,marginBottom:5}}
     
           >
-   
+    <TouchableOpacity style={{ flex: 1,
+    padding: 5,
+    flexDirection: 'row',
+                             }} 
+      onPress={onEventPress}>
       
       <View style={viewStyles.circleContainer}>
 {/*         <Circle size={15} color={rest.color} /> */}
@@ -47,8 +46,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
         <Text style={textStyles.subtitle}>Revenue: ${value}</Text>
       </View>
    
-    
-    </LinearGradient>
     </TouchableOpacity>
+    </LinearGradient>
   );
 };
