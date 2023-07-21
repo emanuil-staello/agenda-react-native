@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react'
 import { SectionList, View } from 'react-native';
 import { Month } from 'react-native-month';
 import { useAgendaEvents } from '../../hooks/use-agenda-events';
-import { AgendaProps,ExtendedMarkedDays } from 'src/types';
+import { AgendaProps } from 'src/types';
 import { Events } from '../Events/Events';
 
 import { viewStyles } from './Agenda.styles';
