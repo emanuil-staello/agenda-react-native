@@ -20,7 +20,7 @@ export const Agenda = ({
   firstDayMonday = false,
   viewType = 'month',
   changeView,
-  re_render_elements= false,
+
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
   const currentDay = useMemo(() => selectedDay ?? new Date(), [selectedDay]);
@@ -50,9 +50,11 @@ export const Agenda = ({
     events ?? [],
     viewType,
     firstDayMonday,
-    re_render_elements
+
   );
-  console.log(markedDays);
+   function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+  }
   return (
     <View style={[viewStyles.container, theme?.container]}>
       {viewType === 'month' && (
@@ -62,7 +64,7 @@ export const Agenda = ({
             year={currentDay.getFullYear()}
             startDate={currentDay}
             onPress={onDayPressCallback}
-            markedDays={markedDays}
+            markedDays={!isEmpty(markedDays)&&markedDays}
             showWeekdays
             locale={locale}
             firstDayMonday={firstDayMonday}
@@ -77,7 +79,7 @@ export const Agenda = ({
           monthTheme={monthTheme}
           firstDayMonday={firstDayMonday}
           locale={locale}
-          markedDays={markedDays}
+          markedDays={!isEmpty(markedDays)&&markedDays}
           onPress={onDayPressCallback}
 
         />
