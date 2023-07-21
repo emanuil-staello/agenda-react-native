@@ -20,6 +20,7 @@ export const Agenda = ({
   firstDayMonday = false,
   viewType = 'month',
   changeView,
+  onEventPress,
 
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
@@ -90,6 +91,7 @@ export const Agenda = ({
         renderSectionHeader={renderSectionHeader}
         viewType={viewType}
         firstDayMonday={firstDayMonday}
+        onEventPress={onEventPress}
 
       />
     </View>
