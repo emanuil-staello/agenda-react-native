@@ -20,6 +20,7 @@ export const Agenda = ({
   firstDayMonday = false,
   viewType = 'month',
   changeView,
+  re_render_elements,
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
   const currentDay = useMemo(() => selectedDay ?? new Date(), [selectedDay]);
@@ -41,7 +42,7 @@ export const Agenda = ({
         viewPosition: 0,
       });
     },
-    [firstDayMonday, onDayPress, viewType]
+    [firstDayMonday, onDayPress, viewType,re_render_elements]
   );
 
   const { markedDays } = useAgendaEvents(
