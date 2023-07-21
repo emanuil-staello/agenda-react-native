@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react'
 import { SectionList, View } from 'react-native';
 import { Month } from 'react-native-month';
 import { useAgendaEvents } from '../../hooks/use-agenda-events';
-import { AgendaProps } from 'src/types';
+import { AgendaProps,ExtendedMarkedDays } from 'src/types';
 import { Events } from '../Events/Events';
 
 import { viewStyles } from './Agenda.styles';
@@ -23,7 +23,7 @@ export const Agenda = ({
 
 }: AgendaProps) => {
   const sectionListRef = useRef<SectionList>(null);
-  const [markedDays, setMarkedDays] = useState([]);
+  const [markedDays, setMarkedDays] = useState<ExtendedMarkedDays>({});
 
   const currentDay = useMemo(() => selectedDay ?? new Date(), [selectedDay]);
 
@@ -47,7 +47,7 @@ export const Agenda = ({
     [firstDayMonday, onDayPress, viewType]
   );
 
-  useEffect(() => {
+    useEffect(() => {
     // Call useAgendaEvents and update markedDays whenever any of the dependencies change
     const { markedDays: updatedMarkedDays } = useAgendaEvents(
       currentDay,
