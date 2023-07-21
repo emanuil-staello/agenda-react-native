@@ -79,7 +79,7 @@ export const Agenda = ({
           locale={locale}
           markedDays={markedDays}
           onPress={onDayPressCallback}
-  }
+
         />
       )}
       {changeView}
