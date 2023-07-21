@@ -61,7 +61,7 @@ export const Agenda = ({
             year={currentDay.getFullYear()}
             startDate={currentDay}
             onPress={onDayPressCallback}
-            markedDays={markedDays}
+            markedDays={markedDays.events.length>0&&markedDays}
             showWeekdays
             locale={locale}
             firstDayMonday={firstDayMonday}
