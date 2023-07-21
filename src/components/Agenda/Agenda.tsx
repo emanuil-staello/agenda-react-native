@@ -67,6 +67,7 @@ export const Agenda = ({
             locale={locale}
             firstDayMonday={firstDayMonday}
             theme={monthTheme}
+            re_render_elements={re_render_elements}
           />
         </View>
       )}
@@ -78,6 +79,7 @@ export const Agenda = ({
           locale={locale}
           markedDays={markedDays}
           onPress={onDayPressCallback}
+          re_render_elements={re_render_elements}
         />
       )}
       {changeView}
