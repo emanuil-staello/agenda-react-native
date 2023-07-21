@@ -59,7 +59,7 @@ export const useAgendaEvents = (
         currentDay = currentDay.add(1, 'day');
       }
     });
-     console.log(markedDays);
+ 
     return { markedDays };
   }, [currentMonth, events, firstDayMonday, viewType]);
 };
