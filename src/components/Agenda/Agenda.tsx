@@ -44,7 +44,7 @@ export const Agenda = ({
     },
     [firstDayMonday, onDayPress, viewType]
   );
-  console.log(events)
+  // console.log(events)
   const { markedDays } = useAgendaEvents(
     currentDay,
     events ?? [],
