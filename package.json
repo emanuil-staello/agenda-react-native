@@ -70,11 +70,7 @@
       "module:metro-react-native-babel-preset"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn typescript && yarn test"
-    }
-  },
+
   "jest": {
     "preset": "react-native",
     "setupFilesAfterEnv": [
