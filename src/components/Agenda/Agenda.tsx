@@ -78,7 +78,7 @@ export const Agenda = ({
           onPress={onDayPressCallback}
         />
       )}
-      <changeView/>
+      {changeView}
       <Events
         currentDay={currentDay}
         markedDays={markedDays}
