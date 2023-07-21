@@ -52,7 +52,7 @@ export const Agenda = ({
     firstDayMonday,
     re_render_elements
   );
-
+  console.log(markedDays);
   return (
     <View style={[viewStyles.container, theme?.container]}>
       {viewType === 'month' && (
