@@ -49,7 +49,8 @@ export const Agenda = ({
     currentDay,
     events ?? [],
     viewType,
-    firstDayMonday
+    firstDayMonday,
+    re_render_elements
   );
 
   return (
