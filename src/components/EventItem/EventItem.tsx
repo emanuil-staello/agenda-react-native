@@ -25,7 +25,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
             // colors={['#5ab2f7','#12cff3']}
             start={{x: 0, y: 0.5}}
             end={{x: 1, y: 1}}
-            style={{padding:10,marginBottom:5}}
+            style={{flex: 1,padding:10,marginBottom:5}}
     
           >
     <TouchableOpacity style={{ flex: 1,
