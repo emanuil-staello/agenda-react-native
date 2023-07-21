@@ -51,7 +51,7 @@ export const Agenda = ({
     viewType,
     firstDayMonday
   );
-  console.log(markedDays);
+  // console.log(markedDays);
 
   return (
     <View style={[viewStyles.container, theme?.container]}>
