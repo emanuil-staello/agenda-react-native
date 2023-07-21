@@ -54,7 +54,7 @@ export const Agenda = ({
   console.log(markedDays);
   return (
     <View style={[viewStyles.container, theme?.container]}>
-      {viewType === 'month' && Array.isArray(markedDays.events)&& (
+      {viewType === 'month' &&  (
         <View style={[viewStyles.monthContainer, theme?.monthContainer]}>
           <Month
             month={currentDay.getMonth()}
