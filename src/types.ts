@@ -76,6 +76,6 @@ export interface AgendaProps extends AgendaMonthProps {
   firstDayMonday?: boolean;
   viewType?: AgendaViewType;
   changeView?: () => void;
-  re_render_elements?: () => void;
+  re_render_elements?: boolean;
 
 }
