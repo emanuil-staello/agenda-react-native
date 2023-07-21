@@ -15,7 +15,7 @@ export const viewStyles = StyleSheet.create({
 });
 
 export const textStyles = StyleSheet.create({
-  title: { fontSize: fontSize.body, marginBottom: spacing.small / 2 },
-  subtitle: { fontSize: fontSize.caption1, color: 'gray' },
+  title: { fontSize: fontSize.body, marginBottom: spacing.small / 2 ,color:'#fff'},
+  subtitle: { fontSize: fontSize.caption1, color: '#fff' },
 
 });
