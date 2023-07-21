@@ -49,8 +49,7 @@ export const Agenda = ({
     currentDay,
     events ?? [],
     viewType,
-    firstDayMonday,
-
+    firstDayMonday
   );
    function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -64,7 +63,7 @@ export const Agenda = ({
             year={currentDay.getFullYear()}
             startDate={currentDay}
             onPress={onDayPressCallback}
-            markedDays={!isEmpty(markedDays)&&markedDays}
+            markedDays={Object.keys(markedDays).length>0</Month>&&markedDays}
             showWeekdays
             locale={locale}
             firstDayMonday={firstDayMonday}
@@ -79,7 +78,7 @@ export const Agenda = ({
           monthTheme={monthTheme}
           firstDayMonday={firstDayMonday}
           locale={locale}
-          markedDays={!isEmpty(markedDays)&&markedDays}
+          markedDays={Object.keys(markedDays).length>0</Month>&&markedDays}
           onPress={onDayPressCallback}
 
         />
