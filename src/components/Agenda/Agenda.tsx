@@ -54,14 +54,14 @@ export const Agenda = ({
   console.log(markedDays);
   return (
     <View style={[viewStyles.container, theme?.container]}>
-      {viewType === 'month' && (
+      {viewType === 'month' && markedDays.events.length>0&& (
         <View style={[viewStyles.monthContainer, theme?.monthContainer]}>
           <Month
             month={currentDay.getMonth()}
             year={currentDay.getFullYear()}
             startDate={currentDay}
             onPress={onDayPressCallback}
-            markedDays={markedDays.events.length>0&&markedDays}
+            markedDays={markedDays}
             showWeekdays
             locale={locale}
             firstDayMonday={firstDayMonday}
