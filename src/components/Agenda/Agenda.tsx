@@ -42,7 +42,7 @@ export const Agenda = ({
         viewPosition: 0,
       });
     },
-    [firstDayMonday, onDayPress, viewType,re_render_elements]
+    [firstDayMonday, onDayPress, viewType]
   );
 
   const { markedDays } = useAgendaEvents(
