@@ -9,10 +9,8 @@ export const useAgendaEvents = (
   firstDayMonday: boolean,
 
 ) => {
-  console.log(currentMonth);
-  console.log(events);
-  console.log(viewType);
-  console.log(firstDayMonday);
+ 
+
   return useMemo(() => {
     const markedDays: ExtendedMarkedDays = {};
     const rangeType =
@@ -61,6 +59,7 @@ export const useAgendaEvents = (
         currentDay = currentDay.add(1, 'day');
       }
     });
+     console.log(markedDays);
     return { markedDays };
   }, [currentMonth, events, firstDayMonday, viewType]);
 };
