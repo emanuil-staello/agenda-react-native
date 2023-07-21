@@ -27,7 +27,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
       onPress={onEventPress}>
       <View style={viewStyles.circleContainer}>
 {/*         <Circle size={15} color={rest.color} /> */}
-       <Text style={{backgroundColor:'#fff',fontSize:16,fontWeight:'bold',color:'#000',padding:5,borderRadius:5,textTransform:'uppercase',minWidth:103}}>{status}</Text>
+       <Text style={{backgroundColor:'#fff',fontSize:16,fontWeight:'bold',color:'#000',padding:5,borderRadius:5,textTransform:'uppercase',minWidth:103,textAlign:'center'}}>{status}</Text>
       </View>
       <View>
         <Text style={textStyles.title}>{name}</Text>
