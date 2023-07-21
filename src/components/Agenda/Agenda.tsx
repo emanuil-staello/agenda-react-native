@@ -47,7 +47,7 @@ export const Agenda = ({
     [firstDayMonday, onDayPress, viewType]
   );
 
-    useEffect(() => {
+ 
     // Call useAgendaEvents and update markedDays whenever any of the dependencies change
     const { markedDays: updatedMarkedDays } = useAgendaEvents(
       currentDay,
@@ -55,7 +55,7 @@ export const Agenda = ({
       viewType,
       firstDayMonday
     );
-  }, [currentDay, events, viewType, firstDayMonday]);
+
 
   return (
     <View style={[viewStyles.container, theme?.container]}>
