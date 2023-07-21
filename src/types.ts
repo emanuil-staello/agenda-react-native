@@ -17,9 +17,14 @@ export type Event = {
   value:string;
   service:string;
   vechile_info:string;
- 
-
-  
+};
+type ExtendedMarkedDays = {
+  [date: string]: {
+    marked?: boolean;
+    dotColor?: string;
+    activeOpacity?: number;
+    disableTouchEvent?: boolean;
+  };
 };
 
 type ValueOf<T> = T[keyof T];
