@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import React, { useCallback } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Event } from 'src/types';
+import { LinearGradient } from 'expo-linear-gradient';
 // import { Circle } from '../Circle/Circle';
 
 import { viewStyles, textStyles } from './EventItem.styles';
@@ -22,9 +23,16 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
     <TouchableOpacity style={{ flex: 1,
     padding: 5,
     flexDirection: 'row',
-    backgroundColor:rest.color,
                              }} 
       onPress={onEventPress}>
+      <LinearGradient
+            colors={status === 'completed' ? ['#099773','#43b692'] : status === 'pending' ? ['#5ab2f7','#12cff3']:['#CB356B','#BD3F32']}
+            // colors={['#5ab2f7','#12cff3']}
+            start={{x: 0, y: 0.5}}
+            end={{x: 1, y: 1}}
+            style={{padding:10,marginBottom:5}}
+    
+          >
       <View style={viewStyles.circleContainer}>
 {/*         <Circle size={15} color={rest.color} /> */}
        <Text style={{backgroundColor:'#fff',fontSize:16,fontWeight:'bold',color:'#000',padding:5,borderRadius:5,textTransform:'uppercase',minWidth:103,textAlign:'center'}}>{status}</Text>
@@ -36,6 +44,7 @@ export const EventItem = ({ onPress, ...rest }: EventItemProps) => {
         <Text style={textStyles.subtitle}>Service:{service}</Text>
         <Text style={textStyles.subtitle}>Revenue: ${value}</Text>
       </View>
+      </LinearGradient>
     </TouchableOpacity>
   );
 };

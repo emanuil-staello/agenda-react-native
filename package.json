@@ -63,7 +63,8 @@
     "react-native-builder-bob": "^0.18.3",
     "react-test-renderer": "18.0.0",
     "ts-jest": "^28.0.8",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "expo-linear-gradient": "~12.1.2"
   },
   "babel": {
     "presets": [
